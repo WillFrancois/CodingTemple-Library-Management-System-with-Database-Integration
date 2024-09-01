@@ -19,6 +19,7 @@ def user_details(db):
         print()
         return
     print("No user with that id was found!")
+    print()
 
     db.conn.commit()
     user_list.close()

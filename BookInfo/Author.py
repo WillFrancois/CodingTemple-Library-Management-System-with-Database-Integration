@@ -23,12 +23,12 @@ def detail_author(db):
         print()
         return
     print("No author with that name was found!")
+    print()
 
     db.conn.commit()
     author_list.close()
 
 def display_authors(db):
-
     author_list = db.run_return_query("select * from authors", [], "Could not find authors from the database.")
 
     for author in author_list.fetchall():
